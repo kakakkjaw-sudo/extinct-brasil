@@ -1,0 +1,69 @@
+[
+ {
+  "id": "portal",
+  "titulo": "Atravessar o portal",
+  "tipo": "visit",
+  "alvo": "pleistoceno",
+  "meta": 1,
+  "descricao": "Siga a trilha a leste da Base Temporal e atravesse o portal até o BRASIL PRÉ-HISTÓRICO.",
+  "recompensa": [
+   "Você foi ao Pleistoceno e voltou inteiro! Os sensores do ECOMAX já estão calibrados."
+  ],
+  "capsulas": 0
+ },
+ {
+  "id": "descobrir2",
+  "titulo": "Primeiro contato",
+  "tipo": "seen",
+  "meta": 2,
+  "descricao": "Encontre 2 espécies diferentes no capim alto do Pleistoceno. Elas ficam registradas na ECODEX.",
+  "recompensa": [
+   "Dois registros novos na ECODEX! Esse é o começo de uma grande pesquisa."
+  ],
+  "capsulas": 0
+ },
+ {
+  "id": "capturar1",
+  "titulo": "Primeiro estudo",
+  "tipo": "captured",
+  "meta": 1,
+  "descricao": "Estude 1 criatura de perto usando a CÁPSULA TEMPORAL. Dica: ESCANEIE e RASTREIE antes de lançar.",
+  "recompensa": [
+   "Seu primeiro estudo completo! Veja a Curiosidade e a História dela na ECODEX."
+  ],
+  "capsulas": 1
+ },
+ {
+  "id": "descobrir4",
+  "titulo": "Olho de cientista",
+  "tipo": "seen",
+  "meta": 4,
+  "descricao": "Descubra 4 espécies diferentes. A megafauna do Brasil era muito variada!",
+  "recompensa": [
+   "Quatro espécies descobertas. Você já enxerga o Pleistoceno como um cientista!"
+  ],
+  "capsulas": 0
+ },
+ {
+  "id": "capturar3",
+  "titulo": "Pesquisador de campo",
+  "tipo": "captured",
+  "meta": 3,
+  "descricao": "Estude 3 espécies com a CÁPSULA TEMPORAL e leia o que a ECODEX conta sobre elas.",
+  "recompensa": [
+   "Três espécies estudadas! O ECOMAX vai liberar mais uma cápsula para as próximas expedições."
+  ],
+  "capsulas": 1
+ },
+ {
+  "id": "ecodex",
+  "titulo": "ECODEX completa",
+  "tipo": "captured",
+  "meta": 0,
+  "descricao": "Estude TODAS as espécies do Pleistoceno e complete a ECODEX.",
+  "recompensa": [
+   "Todas as espécies registradas! Você completou a ECODEX do Pleistoceno."
+  ],
+  "capsulas": 0
+ }
+]

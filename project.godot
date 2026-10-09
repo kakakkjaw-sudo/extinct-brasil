@@ -1,0 +1,34 @@
+; Engine configuration file.
+; EXTINCT: BRASIL - The Time Hunters
+; (projeto transformado a partir da base MonsterCollector)
+
+config_version=5
+
+[application]
+
+config/name="EXTINCT: BRASIL - The Time Hunters"
+config/description="Jogo 2D top-down de exploração e coleção de criaturas extintas do Brasil."
+run/main_scene="res://UI/TitleScreen.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Game="*res://Scripts/Game.gd"
+Ecodex="*res://Scripts/Ecodex.gd"
+Quests="*res://Scripts/Quests.gd"
+TouchControls="*res://Scripts/TouchControls.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=640
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/handheld/orientation=4
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+<rect width="128" height="128" fill="#2e6b3a"/>
+<rect x="8" y="8" width="112" height="112" fill="none" stroke="#f0e6c8" stroke-width="6"/>
+<circle cx="64" cy="64" r="34" fill="#4a78d8"/>
+<circle cx="64" cy="64" r="22" fill="#82dcfa"/>
+<circle cx="64" cy="64" r="10" fill="#f4ffff"/>
+<text x="64" y="112" font-size="16" text-anchor="middle" fill="#f0e6c8" font-family="monospace">EXTINCT</text>
+</svg>

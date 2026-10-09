@@ -1,0 +1,261 @@
+{
+ "lab": {
+  "name": "LABORATÓRIO TEMPORAL",
+  "tiles": [
+   "LLLLLLLLLLLLLLL",
+   "LfmmmfffffmmmfL",
+   "LfffffffffffffL",
+   "LfffffffffffffL",
+   "LfffffmmmfffffL",
+   "LfffffffffffffL",
+   "LfffffffffffffL",
+   "LfffffffffffffL",
+   "LfffffffffffffL",
+   "LLLLLLLxLLLLLLL"
+  ],
+  "warps": [
+   {
+    "x": 7,
+    "y": 9,
+    "to": "base",
+    "tx": 8,
+    "ty": 7,
+    "dir": "down"
+   }
+  ],
+  "npcs": [
+   {
+    "id": "eduarda",
+    "name": "Eduarda",
+    "x": 7,
+    "y": 2,
+    "sprite": "eduarda",
+    "facing": "down",
+    "lines": [
+     "Eu cuido da tecnologia da equipe. A TEMPORAL CAPSULE cria um campo seguro em volta da criatura.",
+     "Ela não machuca ninguém: a criatura é estudada por alguns instantes e depois devolvida ao seu tempo.",
+     "O portal para o BRASIL PRÉ-HISTÓRICO fica a leste, depois da porta do laboratório. Boa expedição!"
+    ],
+    "repeat_lines": [
+     "Em cada encontro você leva 3 cápsulas. Use com cuidado!"
+    ]
+   },
+   {
+    "id": "manu",
+    "name": "Manu",
+    "x": 3,
+    "y": 5,
+    "sprite": "manu",
+    "facing": "right",
+    "lines": [
+     "Eu sou da Biologia. Use ESCANEAR primeiro: ele mostra o habitat e a alimentação da espécie.",
+     "Quanto mais dados você tiver, mais forte fica o sinal de rastreio."
+    ],
+    "repeat_lines": [
+     "Dica da Biologia: sempre escaneie antes de lançar uma cápsula."
+    ]
+   },
+   {
+    "id": "laura",
+    "name": "Laura",
+    "x": 11,
+    "y": 5,
+    "sprite": "laura",
+    "facing": "left",
+    "lines": [
+     "Eu cuido da parte histórica. No Pleistoceno, o Brasil era casa de preguiças gigantes, tigres-dentes-de-sabre e muito mais.",
+     "A maior parte dessa megafauna desapareceu no fim da última era glacial, há cerca de 11 mil anos.",
+     "A ECODEX só revela a Curiosidade e a História de uma espécie depois que você a estuda de perto."
+    ],
+    "repeat_lines": [
+     "Registre todas as espécies. Cada uma conta um pedaço da história do Brasil."
+    ]
+   },
+   {
+    "id": "proenca",
+    "name": "Prof. Proença",
+    "x": 7,
+    "y": 6,
+    "sprite": "proenca",
+    "facing": "down",
+    "lines": [
+     "Fale comigo!"
+    ]
+   },
+   {
+    "id": "felipe",
+    "name": "Felipe",
+    "x": 11,
+    "y": 2,
+    "sprite": "felipe",
+    "facing": "down",
+    "lines": [
+     "Eu sou o Felipe, líder da equipe. Cuido para que todo mundo volte inteiro de cada expedição.",
+     "Antes de viajar no tempo, fale com o Prof. Proença: ele tem um equipamento novo para a expedição."
+    ],
+    "repeat_lines": [
+     "Boa sorte lá no Pleistoceno! Estaremos na base esperando por você."
+    ]
+   }
+  ]
+ },
+ "base": {
+  "name": "BASE TEMPORAL",
+  "tiles": [
+   "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+   "T.......T......T..........T..T",
+   "TT................T........T.T",
+   "T....RRRRRRR..T.....TT.......T",
+   "T....RRRRRRR....T....TT...TTTT",
+   "T....WWWWWWW....T........T...T",
+   "T....WWWDWWW.................T",
+   "T.......=.....T..............T",
+   "T.......=S......T..T.........T",
+   "T.......=................rr..T",
+   "T.......=================Pr..T",
+   "T........................rr..T",
+   "TT.......T......T............T",
+   "T.~~~~~T....T.............T..T",
+   "T.~~~~~..T.............T..T..T",
+   "T.~~~~~..TTTT........T...T...T",
+   "T.~~~~~............T..TT.TTT.T",
+   "T............TTT.TT....TT.T..T",
+   "T..T....TT...TT........T.....T",
+   "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+  ],
+  "warps": [
+   {
+    "x": 8,
+    "y": 6,
+    "to": "lab",
+    "tx": 7,
+    "ty": 8,
+    "dir": "up"
+   },
+   {
+    "x": 25,
+    "y": 10,
+    "to": "pleistoceno",
+    "tx": 3,
+    "ty": 10,
+    "dir": "right"
+   }
+  ],
+  "npcs": [
+   {
+    "id": "placa_base",
+    "name": "Placa",
+    "x": 9,
+    "y": 8,
+    "sprite": "",
+    "lines": [
+     "BASE TEMPORAL. Portal para o BRASIL PRÉ-HISTÓRICO (Pleistoceno): siga a trilha para leste."
+    ]
+   },
+   {
+    "id": "tiago",
+    "name": "Tiago",
+    "x": 18,
+    "y": 9,
+    "sprite": "tiago",
+    "facing": "down",
+    "lines": [
+     "Meu trabalho é o rastreamento. Capim alto esconde pegadas: ande por ele e algo vai aparecer.",
+     "Use RASTREAR para deixar o sinal mais forte antes de lançar a cápsula."
+    ],
+    "repeat_lines": [
+     "Rastro fresco no capim alto, do outro lado do portal!"
+    ]
+   },
+   {
+    "id": "lucas",
+    "name": "Lucas",
+    "x": 13,
+    "y": 11,
+    "sprite": "lucas",
+    "facing": "up",
+    "lines": [
+     "Eu planejo a estratégia da equipe. Regra de ouro: não gaste todas as cápsulas de uma vez.",
+     "O sinal temporal dura poucos turnos em cada encontro. Rastreie com planejamento."
+    ],
+    "repeat_lines": [
+     "Planejamento é tudo: escaneie, rastreie e só então lance a cápsula."
+    ]
+   }
+  ]
+ },
+ "pleistoceno": {
+  "name": "BRASIL PRÉ-HISTÓRICO - PLEISTOCENO",
+  "tiles": [
+   "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+   "T....gggTggg....T........T...T",
+   "T...gggggggg..........~....T.T",
+   "T....ggggggg.TT....~~~~~~~...T",
+   "T....TgTggg....T..~~~~~~~~~T.T",
+   "T........g.......~~~~~~~~~~~.T",
+   "T....Tgggggg...T.g~~~~~~~~~.TT",
+   "T.T..ggggggg...T.gT~~~~~~~..TT",
+   "T....gggggggg..T..gggg~gg....T",
+   "Trr.Sggggggg.T.....TTgggggT..T",
+   "TrP======ggggT.....TggTggg...T",
+   "Trr.ggggggggg..TT..gTTgggg...T",
+   "T....gggggggg.......gTggg....T",
+   "T.......ggggg.....T..........T",
+   "T...T..Tg~gggg...........T...T",
+   "T..T..~~~~~~~gg..............T",
+   "T...T~~~~~~~~~.T.T...........T",
+   "TT...T~~~~~~~....T...........T",
+   "TTT......~TTT.T.......T......T",
+   "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+  ],
+  "encounter_color": "#78a85a",
+  "encounters": [
+   {
+    "id": "eremotherium",
+    "peso": 3
+   },
+   {
+    "id": "toxodon",
+    "peso": 3
+   },
+   {
+    "id": "notiomastodon",
+    "peso": 2
+   },
+   {
+    "id": "xenorhinotherium",
+    "peso": 2
+   },
+   {
+    "id": "glyptodon",
+    "peso": 2
+   },
+   {
+    "id": "smilodon",
+    "peso": 1
+   }
+  ],
+  "warps": [
+   {
+    "x": 2,
+    "y": 10,
+    "to": "base",
+    "tx": 24,
+    "ty": 10,
+    "dir": "left"
+   }
+  ],
+  "npcs": [
+   {
+    "id": "placa_pleisto",
+    "name": "Placa",
+    "x": 4,
+    "y": 9,
+    "sprite": "",
+    "lines": [
+     "PLEISTOCENO. Criaturas se escondem no capim alto. O portal de volta fica a oeste."
+    ]
+   }
+  ]
+ }
+}
