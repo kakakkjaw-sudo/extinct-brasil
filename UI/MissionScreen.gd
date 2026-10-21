@@ -41,8 +41,8 @@ func open() -> void:
 	visible = true
 	while true:
 		await get_tree().process_frame
-		if _tapped or Input.is_action_just_pressed("cancel") or Input.is_action_just_pressed("missions") \
-				or Input.is_action_just_pressed("interact"):
+		if _tapped or Game.just("cancel") or Game.just("missions") \
+				or Game.just("interact"):
 			break
 	visible = false
 

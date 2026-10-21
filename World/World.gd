@@ -209,7 +209,7 @@ func is_blocked(t: Vector2i) -> bool:
 func _process(_delta: float) -> void:
 	if busy or player.moving:
 		return
-	if Input.is_action_just_pressed("debug_reset"):
+	if Game.just("debug_reset"):
 		Ecodex.reset()
 		Quests.reset()
 		Game.has_ecomax = false
@@ -217,23 +217,23 @@ func _process(_delta: float) -> void:
 		_refresh_hud()
 		_show_banner("ECODEX e missões reiniciadas")
 		return
-	if Input.is_action_just_pressed("ecodex"):
+	if Game.just("ecodex"):
 		_open_ecodex()
 		return
-	if Input.is_action_just_pressed("missions"):
+	if Game.just("missions"):
 		_open_missions()
 		return
-	if Input.is_action_just_pressed("interact"):
+	if Game.just("interact"):
 		_interact()
 		return
 	var dir := Vector2i.ZERO
-	if Input.is_action_pressed("move_up"):
+	if Game.held("move_up"):
 		dir = Vector2i.UP
-	elif Input.is_action_pressed("move_down"):
+	elif Game.held("move_down"):
 		dir = Vector2i.DOWN
-	elif Input.is_action_pressed("move_left"):
+	elif Game.held("move_left"):
 		dir = Vector2i.LEFT
-	elif Input.is_action_pressed("move_right"):
+	elif Game.held("move_right"):
 		dir = Vector2i.RIGHT
 	if dir != Vector2i.ZERO:
 		player.try_move(dir)

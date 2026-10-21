@@ -81,15 +81,40 @@ func _unhandled_input(event: InputEvent) -> void:
 		touch_changed.emit()
 
 
+# Estado dos botões de toque, lido diretamente (não depende de eventos simulados).
+var _virt_held: Dictionary = {}
+var _virt_frame: Dictionary = {}
+
+
+func virtual_set(action: String, down: bool) -> void:
+	if down:
+		_virt_held[action] = true
+		_virt_frame[action] = Engine.get_process_frames()
+	else:
+		_virt_held.erase(action)
+
+
+## Ação segurada agora (teclado OU botão de toque).
+func held(action: String) -> bool:
+	return Input.is_action_pressed(action) or _virt_held.has(action)
+
+
+## Ação apertada neste quadro (teclado OU botão de toque).
+func just(action: String) -> bool:
+	return Input.is_action_just_pressed(action) or int(_virt_frame.get(action, -1)) == Engine.get_process_frames()
+
+
 ## Simula um aperto rápido de "interact" (usado quando a pessoa toca na tela
 ## para avançar um diálogo).
 func tap_interact() -> void:
+	virtual_set("interact", true)
 	var down := InputEventAction.new()
 	down.action = "interact"
 	down.pressed = true
 	down.strength = 1.0
 	Input.parse_input_event(down)
 	await get_tree().create_timer(0.06).timeout
+	virtual_set("interact", false)
 	var up := InputEventAction.new()
 	up.action = "interact"
 	up.pressed = false

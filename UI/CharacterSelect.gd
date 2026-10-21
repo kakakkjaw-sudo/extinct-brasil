@@ -183,21 +183,21 @@ func _refresh() -> void:
 func _process(_delta: float) -> void:
 	if locked:
 		return
-	if Input.is_action_just_pressed("interact"):
+	if Game.just("interact"):
 		_choose()
-	elif Input.is_action_just_pressed("cancel"):
+	elif Game.just("cancel"):
 		if confirming:
 			confirming = false
 			_refresh()
 		else:
 			_go(TITLE_SCENE)
-	elif Input.is_action_just_pressed("move_left"):
+	elif Game.just("move_left"):
 		_move(-1)
-	elif Input.is_action_just_pressed("move_right"):
+	elif Game.just("move_right"):
 		_move(1)
-	elif Input.is_action_just_pressed("move_up"):
+	elif Game.just("move_up"):
 		_move(-COLS)
-	elif Input.is_action_just_pressed("move_down"):
+	elif Game.just("move_down"):
 		_move(COLS)
 
 

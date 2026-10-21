@@ -92,17 +92,17 @@ func _process(_delta: float) -> void:
 	if locked:
 		return
 	if showing_msg:
-		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("cancel"):
+		if Game.just("interact") or Game.just("cancel"):
 			showing_msg = false
 			msg_panel.visible = false
 		return
-	if Input.is_action_just_pressed("move_up"):
+	if Game.just("move_up"):
 		index = (index + OPTION_Y.size() - 1) % OPTION_Y.size()
 		_place_cursor()
-	elif Input.is_action_just_pressed("move_down"):
+	elif Game.just("move_down"):
 		index = (index + 1) % OPTION_Y.size()
 		_place_cursor()
-	elif Input.is_action_just_pressed("interact"):
+	elif Game.just("interact"):
 		_choose()
 
 

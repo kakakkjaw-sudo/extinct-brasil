@@ -206,12 +206,12 @@ func _say(text: String, wait: bool = true) -> void:
 	msg_label.start(text)
 	while msg_label.typing:
 		await get_tree().process_frame
-		if Input.is_action_just_pressed("interact"):
+		if Game.just("interact"):
 			msg_label.skip()
 	if wait:
 		while true:
 			await get_tree().process_frame
-			if Input.is_action_just_pressed("interact"):
+			if Game.just("interact"):
 				break
 
 

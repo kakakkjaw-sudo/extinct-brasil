@@ -255,6 +255,7 @@ func _fire(action: String, down: bool) -> void:
 
 
 func _send(action: String, down: bool) -> void:
+	Game.virtual_set(action, down)
 	var ev := InputEventAction.new()
 	ev.action = action
 	ev.pressed = down

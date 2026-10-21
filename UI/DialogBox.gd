@@ -48,12 +48,12 @@ func say(lines: Array, speaker: String = "") -> void:
 		arrow.visible = false
 		while text_label.typing:
 			await get_tree().process_frame
-			if Input.is_action_just_pressed("interact"):
+			if Game.just("interact"):
 				text_label.skip()
 		arrow.visible = true
 		while true:
 			await get_tree().process_frame
-			if Input.is_action_just_pressed("interact"):
+			if Game.just("interact"):
 				break
 	visible = false
 

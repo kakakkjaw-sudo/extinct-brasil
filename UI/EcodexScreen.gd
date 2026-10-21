@@ -96,7 +96,7 @@ func open() -> void:
 func _process(_delta: float) -> void:
 	if not visible or Engine.get_process_frames() == _ignore_frame:
 		return
-	if Input.is_action_just_pressed("cancel") or Input.is_action_just_pressed("ecodex"):
+	if Game.just("cancel") or Game.just("ecodex"):
 		_close()
 
 
