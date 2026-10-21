@@ -57,6 +57,11 @@ func _add_action(action_name: String, keys: Array) -> void:
 
 # ------------------------------------------------------------------ toque
 func _detect_touch() -> bool:
+	# no navegador, pergunta direto ao navegador se o aparelho tem tela de toque
+	if OS.has_feature("web"):
+		var r = JavaScriptBridge.eval("(navigator.maxTouchPoints > 0) || ('ontouchstart' in window)", true)
+		if r:
+			return true
 	return DisplayServer.is_touchscreen_available() \
 		or OS.has_feature("android") or OS.has_feature("ios") \
 		or OS.has_feature("web_android") or OS.has_feature("web_ios")

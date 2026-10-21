@@ -38,6 +38,7 @@ const DARK := Color(0.094, 0.125, 0.19, 0.95)
 
 var pressed: Dictionary = {}     # ação -> true enquanto estiver apertada
 var _fingers: Dictionary = {}    # índice do dedo -> {"zone": String, "dir": String}
+var _saw_touch: bool = false    # já chegou algum toque de verdade? (senão aceita o mouse)
 var pad: Node2D
 var rotate_layer: CanvasLayer
 
@@ -154,12 +155,22 @@ func _notification(what: int) -> void:
 # ------------------------------------------------------------------- toque
 func _input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
+		_saw_touch = true
 		if event.pressed:
 			_touch_down(event.index, event.position)
 		else:
 			_touch_up(event.index)
 	elif event is InputEventScreenDrag:
+		_saw_touch = true
 		_touch_move(event.index, event.position)
+	# Reserva: se o aparelho só manda eventos de mouse (ou no PC com F10), o mouse vira um dedo.
+	elif event is InputEventMouseButton and not _saw_touch and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			_touch_down(-1, event.position)
+		else:
+			_touch_up(-1)
+	elif event is InputEventMouseMotion and not _saw_touch and (event.button_mask & MOUSE_BUTTON_MASK_LEFT) != 0:
+		_touch_move(-1, event.position)
 
 
 func _zone_at(p: Vector2) -> String:
